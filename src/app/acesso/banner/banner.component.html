@@ -1,5 +1,8 @@
 <div class="banner-background">
 
-    <img src="/assets/banner-acesso/img_1.png" [@banner]="estado" /> <!--Conexção do elemento com a trigger-->
+    <img *ngFor="let imagem of imagens" 
+        [src]="imagem.url" 
+        [@banner]="imagem.estado" /> 
+        <!--Conexção do elemento com a trigger-->
 
 </div>
