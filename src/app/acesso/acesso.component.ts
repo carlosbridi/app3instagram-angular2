@@ -29,10 +29,21 @@ import {  trigger, state , style,transition, animate } from '@angular/animations
 export class AcessoComponent implements OnInit {
 
   public estadoBanner: string = 'criado';
+  public estadoPainel: string = 'criado';
+
+  public cadastro: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public exibirPainel(event: String): void{
+    this.cadastro = event === 'cadastro';
+  }
+
+  public exibirPainelLogin(event: string): void {
+    this.cadastro = false;
   }
 
 }
